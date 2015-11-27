@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "dbMysql": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "database": "db_puzzle",
+    "password": "sistemas",
+    "name": "dbMysql",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

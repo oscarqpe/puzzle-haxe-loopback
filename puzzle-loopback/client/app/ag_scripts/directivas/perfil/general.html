@@ -1,0 +1,108 @@
+<div class="tab-pane active" id="general">
+    
+    <form class="formulario" ng-submit="guardar()" name="perfilForm">
+        <h3>Imagen de perfil</h3>
+        <div class="form-group" style="display:table;">
+            <div class="perfil-image">              
+                <span ng-show="!usuario.photo">{{docente.nombres | capitalize | limitTo:1}} {{docente.apellidos | capitalize | limitTo:1}}</span>
+                <img ng-show="usuario.photo" ng-src="{{usuario.photo ? usuario.photo : ''}}">
+            </div>
+            
+            <div class="perfil-upload btn btn-blue">
+                <span>Editar imagen de perfil</span>
+                <input type="file" class="upload" file-model="user_photo.file" ng-model-instant onchange="angular.element(this).scope().imageUpload(this)">
+            </div>
+            <!--<div>
+            <button type="button" class="btn btn-success" ng-click="subirFoto()">subir</button>
+                </div>
+            -->
+        </div>
+        <h3>Información de usuario</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group" ng-class="{'has-error':perfilForm.nombres.$invalid && !perfilForm.$pristine, 'has-success':perfilForm.nombres.$valid}">
+                    <label for="nombres">Nombre <span class="asterisk">*</span></label>
+                    <input type="text" name="nombres" id="nombres" ng-model="docente.nombres" class="form-control" required="required">
+                    <span class="help-block" ng-show="perfilForm.nombres.$invalid && perfilForm.nombres.$dirty">Por favor ingrese sus nombres</span>
+                </div>
+                <div class="form-group" ng-class="{'has-error':perfilForm.apellidos.$invalid && !perfilForm.$pristine, 'has-success':perfilForm.apellidos.$valid}">
+                    <label for="apellido">Apellido <span class="asterisk">*</span></label>
+                    <input type="text" name="apellidos" id="apellido" ng-model="docente.apellidos" class="form-control" required="required">
+                    <span class="help-block" ng-show="perfilForm.apellidos.$invalid && perfilForm.apellidos.$dirty">Por favor ingrese sus apellidos</span>
+                </div>
+                <div class="form-group">
+                    <label for="dni">D.N.I.</label>
+                    <input type="text" id="dni" class="form-control" ng-model="docente.numeroDocumento">
+                </div>
+                <div class="form-group">
+                     <label for="titulo">Título o Grado</label>
+                    <select class="form-control" id="titulo" ng-model="docente.grado">
+                        <option value="00">---------------------------------Seleccione---------------------------------</option>
+                        <option ng-repeat="grado in grados" value="{{grado.codigo}}" ng-selected="docente.grado == grado.codigo">{{grado.valor}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                     <label for="condicion">Condición</label>
+                    <select class="form-control" id="condicion" ng-model="docente.condicion">
+                        <option value="00">---------------------------------Seleccione---------------------------------</option>
+                        <option ng-repeat="condicion in condiciones" value="{{condicion.codigo}}" ng-selected="docente.condicion == condicion.codigo">{{condicion.valor}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                     <label for="regimen">Regimén</label>
+                    <select class="form-control" id="regimen" ng-model="docente.regimen">
+                        <option value="00">---------------------------------Seleccione---------------------------------</option>
+                        <option ng-repeat="regimen in regimenes" value="{{regimen.codigo}}" ng-selected="docente.regimen == regimen.codigo">{{regimen.valor}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="apellido">Género</label>
+                    <div class="radio">
+                        <label class="radio-inline">
+                          <input type="radio" name="sexo" value="1" ng-model="docente.genero">
+                          <span class="icons">
+                                <span class="icon"></span>
+                          </span> Hombre
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="sexo" value="0" checked ng-model="docente.genero">
+                          <span class="icons">
+                                <span class="icon"></span>
+                          </span> Mujer
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                     <label for="especialidad">Especialidad</label>
+                    <select class="form-control" id="especialidad" ng-model="docente.especialidad">
+                        <option value="00">---------------------------------Seleccione---------------------------------</option>
+                        <option ng-repeat="especialidad in especialidades" value="{{especialidad.codigo}}" ng-selected="docente.especialidad == especialidad.codigo">{{especialidad.valor}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                     <label for="categoria">Categoría</label>
+                    <select class="form-control" id="categoria" ng-model="docente.categoria">
+                        <option value="00">---------------------------------Seleccione---------------------------------</option>
+                        <option ng-repeat="categoria in categorias" value="{{categoria.codigo}}" ng-selected="docente.categoria == categoria.codigo">{{categoria.valor}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fono">Teléfonos</label>
+                    <input type="text" id="fono" class="form-control" ng-model="docente.telefonos">
+                </div>
+                <div class="form-group" ng-class="{'has-error':perfilForm.email.$invalid && !perfilForm.$pristine, 'has-success':perfilForm.email.$valid}">
+                    <label for="email">Correo electrónico <span class="asterisk">*</span></label>
+                    <input type="email" name="email" id="email" class="form-control" ng-model="usuario.email" required="required">
+                    <span class="help-block" ng-show="perfilForm.email.$invalid && perfilForm.email.$dirty">Por favor ingrese su email</span>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-12">
+                 <button type="submit" class="btn btn-blue" ng-disabled='!perfilForm.$valid'>Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

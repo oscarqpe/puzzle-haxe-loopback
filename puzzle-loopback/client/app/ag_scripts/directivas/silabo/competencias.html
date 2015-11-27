@@ -1,0 +1,41 @@
+<div class="tab-pane" id="competencias">
+    <h3>Competencias y Sumilla de la Asignatura</h3>
+    <label>C. genéricas</label>
+    <div class="form-group form-add" ng-repeat="item in contenido.competencias.genericas">
+        <input type="text" class="form-control" ng-model="item.descripcion"/>
+        <button type="button" class="btn btn-danger" ng-click="quitarGenerica($index)">
+            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addGenerica()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div>
+
+    <label for="especificas">C. específicas</label>
+    <div class="form-group form-add" ng-repeat="item in contenido.competencias.especificas">
+        <input type="text" class="form-control" ng-model="item.descripcion" />
+        <button type="button" class="btn btn-danger" ng-click="quitarEspecifica($index)">
+            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addEspecifica()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div>
+    
+    <label for="sumilla">Sumilla de la asignatura</label>
+    <div class="form-group form-add" ng-repeat="item in contenido.competencias.sumilla">
+        <input type="text" class="form-control" ng-model="item.descripcion" />
+        <button type="button" class="btn btn-danger" ng-click="quitarSumilla($index)">
+            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addSumilla()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div>
+</div>

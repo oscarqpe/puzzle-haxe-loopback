@@ -1,0 +1,36 @@
+<div id="login-wrap">
+	<!--img src="images/unsa.png"-->
+
+	<p class="title">Puzzle</p>
+
+	<div id="login-box">
+		<form ng-submit="login()" role="form" method="post" name="loginForm">
+			<div class="form-group" ng-class="{'has-error':loginForm.username.$invalid && !loginForm.$pristine}">
+			    <label for="username">Username</label>
+			    <input type="username" name="username" class="form-control" id="username" placeholder="username" ng-model="user_login.username" required="required">
+			</div>
+			<div class="form-group" ng-class="{'has-error':loginForm.password.$invalid && !loginForm.$pristine}">
+			    <label for="password">Contraseña</label>
+			    <input type="password" name="password" class="form-control" id="password" placeholder="Contraseña" ng-model="user_login.password" required="required">
+			 </div>
+			
+			<div class="login-btn">
+				<button type="submit" class="btn btn-yellow" ng-disabled='!loginForm.$valid'>Ingresar</button>
+			</div>
+		</form>
+
+		<a href="/#/registro">»» Regístrese aquí en el sistema ««</a>
+	</div>
+
+	<!--ul class="list-inline">
+        <li>
+            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+        </li>
+        <li>
+            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+        </li>
+        <li>
+            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+        </li>
+    </ul-->
+</div>

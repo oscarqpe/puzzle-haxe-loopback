@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="silabo">
+            <form class="formulario" name="silaboForm">
+            <!-- tabs left -->
+            <div class="tabs-left">
+                <ul class="nav nav-tabs">
+                    <li ng-repeat="tab in tabs" ng-click="onClickTab(tab)" ng-class="{'active':selectedTab == $index}"><a data-toggle="tab">{{tab.title}}</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div ng-include="currentTab"></div>
+                    <script type="text/ng-template" id="general">
+                        <generalsilabo></generalsilabo>
+                    </script>
+                    <script type="text/ng-template" id="competencias">
+                        <competenciassilabo></competenciassilabo>
+                    </script>
+                    <script type="text/ng-template" id="contenidos">
+                        <contenidossilabo></contenidossilabo>
+                    </script>
+                    <script type="text/ng-template" id="estrategias">
+                        <estrategiassilabo></estrategiassilabo>
+                    </script>
+                    <script type="text/ng-template" id="evaluacion">
+                        <evaluacionsilabo></evaluacionsilabo>
+                    </script>
+                    <script type="text/ng-template" id="bibliografia">
+                        <bibliografiasilabo></bibliografiasilabo>
+                    </script>
+                </div>
+            </div>
+            <!-- /tabs -->  
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-blue" ng-click="guardarSilabo()" ng-disabled='!silaboForm.$valid'>Guardar sílabo</button>
+                    <button type="button" class="btn btn-success" ng-click="imprimirSilabo()" ng-disabled='!silaboForm.$valid'>Imprimir sílabo</button>
+                </div>
+            </form>                 
+        </div>
+    </div>
+</div>

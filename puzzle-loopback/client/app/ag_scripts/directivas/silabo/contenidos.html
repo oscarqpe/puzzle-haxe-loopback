@@ -1,0 +1,48 @@
+<div class="tab-pane" id="contenidos">
+    <h3>Contenidos Analíticos</h3>
+
+    <div class="form-content" ng-repeat="item in contenido.contenidos">
+        <label>Conceptual</label>
+        <textarea class="form-control" ng-model="item.conceptual" rows="1"></textarea>
+
+        <label>Procedimental</label>
+        <textarea class="form-control" ng-model="item.procedimental" rows="1"></textarea>
+
+        <label>Actitudinal</label>
+        <textarea class="form-control" ng-model="item.actitudinal" rows="1"></textarea>
+
+        <div class="row">
+            <div class="col-md-5">
+                <p class="input-group">
+                    <label>Fecha</label>
+                    <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="item.fecha" is-open="opened[$index]" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event, $index)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+
+            <div class="col-md-3">
+                <label>Hora</label>
+                <input type="text" class="form-control" ng-model="item.hora" />
+            </div>
+            <div class="col-md-3">
+                <label>%</label>
+                <input type="text" class="form-control" ng-model="item.porcentaje" />
+            </div>
+            <div class="col-md-1">
+                <button type="button" class="btn btn-danger delete" ng-click="quitarContenidos($index)">
+                    <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>  
+    </div>
+
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addContenidos()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div>
+
+
+</div>

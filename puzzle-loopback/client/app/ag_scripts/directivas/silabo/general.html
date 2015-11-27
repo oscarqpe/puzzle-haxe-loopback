@@ -1,0 +1,59 @@
+<div class="tab-pane active" id="general">
+   <h3>Información General</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group"  ng-class="{'has-error':silaboForm.asignatura.$invalid && !silaboForm.$pristine}">
+                <label for="asignatura">Asignatura <span class="asterisk">*</span></label>
+                <select class="form-control" id="asignatura" 
+                	ng-model="contenido.general.asignatura" required
+                	ng-change="loadDocenteCurso()" name="asignatura">
+                		<option value="">---------------------------------Seleccione---------------------------------</option>
+                		<option ng-repeat="curso in cursos" data-codigo="{{curso.codigo}}" value="{{curso.idCurso}}" ng-selected="contenido.general.asignatura == curso.idCurso">{{curso.codigo}}: {{curso.nombre}}</option>
+
+                </select>
+                <span class="help-block" ng-show="silaboForm.asignatura.$invalid && silaboForm.asignatura.$dirty">Por favor seleccione la asignatura</span>
+            </div>
+            <div class="form-group" ng-class="{'has-error':silaboForm.asignatura.$invalid && !silaboForm.$pristine}">
+                <label for="caracteristica">Característica <span class="asterisk">*</span></label>
+                <select class="form-control" id="caracteristica" ng-model="contenido.general.caracteristica" name="caracteristica">
+                    <option value="">---------------------------------Seleccione---------------------------------</option>
+                    <option ng-repeat="caracteristica in caracteristicas" value="{{caracteristica.codigo}}" ng-selected="caracteristica.codigo == contenido.general.caracteristica">{{caracteristica.valor}}</option>
+                </select>
+                <span class="help-block" ng-show="silaboForm.caracteristica.$invalid && silaboForm.caracteristica.$dirty">Por favor seleccione la característica</span>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="ht">Teoría</label>
+                        <input type="text" id="ht" class="form-control" ng-model="contenido.general.teoria">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="hp">Práctica</label>
+                        <input type="text" id="hp" class="form-control" ng-model="contenido.general.practica">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="htp">Teoría/práctica</label>
+                        <input type="text" id="htp" class="form-control" ng-model="contenido.general.teoriapractica">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="anio">Año Lectivo</label>
+                <input type="text" id="anio" class="form-control" required="required" ng-model="contenido.general.aniolectivo">
+            </div>
+            <div class="form-group">
+                <label for="creditos">Créditos</label>
+                <input type="text" id="creditos" class="form-control" ng-model="contenido.general.creditos">
+            </div>
+
+        </div>
+    </div>
+        
+</div>

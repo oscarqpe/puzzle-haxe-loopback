@@ -1,0 +1,353 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="academico">
+            <form class="formulario">
+            <!-- tabs left -->
+            <div class="tabs-left">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#general" data-toggle="tab">General</a></li>
+                    <li><a href="#investigacion" data-toggle="tab">Investigación</a></li>
+                    <li><a href="#proyeccion" data-toggle="tab">Proyección social y E. U.</a></li>
+                    <li><a href="#produccion" data-toggle="tab">Producción de bienes </a></li>
+                    <li><a href="#perfeccionamiento" data-toggle="tab">Perfeccionamiento</a></li>
+                    <li><a href="#observaciones" data-toggle="tab">Observaciones</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="general">
+                       <h3>Información General</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="especialidad">Asignatura <span class="asterisk">*</span></label>
+                                        <select class="form-control" id="especialidad">
+                                            <option>Gestión y planeamiento de redes</option>
+                                        </select>
+                                    </div>
+
+                                    <h3 class="title-academico">Horas Semestrales por Grupo</h3>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="ht">Teoría</label>
+                                                <input type="number" id="ht" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="hp">Práctica</label>
+                                                <input type="number" id="hp" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="htp">Teoría/práctica</label>
+                                                <input type="number" id="htp" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row details">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="aula">Nº Aula</label>
+                                                <input type="number" id="aula" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="grupo">Nº Grupo</label>
+                                                <input type="number" id="grupo" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="alumnos">Nº Alumnos</label>
+                                                <input type="number" id="alumnos" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="title-academico">Otras horas</h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="hc">Horas Compartidas</label>
+                                                <input type="number" id="hc" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="hs">Horas Semanales</label>
+                                                <input type="number" id="hs" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                        <h3>Horario (consigne horas de inicio y término)</h3>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label>Lunes</label>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Martes</label>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Miércoles</label>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Jueves</label>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Viernes</label>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Sábado</label>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                                <p>
+                                    <input type="number" class="form-control">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="investigacion">
+                        <h3>Investigación</h3>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción <span class="asterisk">*</span></label>
+                            <input type="text" id="descripcion" class="form-control">
+                        </div>
+                        <div class="row special">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="planta_fisica">Planta Física <span class="asterisk">*</span></label>
+                                    <input type="text" id="planta_fisica" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="duracion">Duración <span class="asterisk">*</span></label>
+                                    <input type="text" id="duracion" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="horario">Horario <span class="asterisk">*</span></label>
+                                    <input type="text" id="horario" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="horas_semanales">Horas Semanales <span class="asterisk">*</span></label>
+                                    <input type="text" id="horas_semanales" class="form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="total_horas">Total de Horas <span class="asterisk">*</span></label>
+                                    <input type="text" id="total_horas" class="form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-blue add-data">Agregar</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane" id="proyeccion">
+                        <h3>Proyección Social y Extensión Universitaria</h3>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción <span class="asterisk">*</span></label>
+                            <input type="text" id="descripcion" class="form-control">
+                        </div>
+                        <div class="row special">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="planta_fisica">Planta Física <span class="asterisk">*</span></label>
+                                    <input type="text" id="planta_fisica" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="duracion">Duración <span class="asterisk">*</span></label>
+                                    <input type="text" id="duracion" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="horario">Horario <span class="asterisk">*</span></label>
+                                    <input type="text" id="horario" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="horas_semanales">Horas Semanales <span class="asterisk">*</span></label>
+                                    <input type="text" id="horas_semanales" class="form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="total_horas">Total de Horas <span class="asterisk">*</span></label>
+                                    <input type="text" id="total_horas" class="form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-blue add-data">Agregar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="produccion">
+                        <h3>Producción de Bienes y/o Prestación de Servicios</h3>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción <span class="asterisk">*</span></label>
+                            <input type="text" id="descripcion" class="form-control">
+                        </div>
+                        <div class="row special">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="planta_fisica">Planta Física <span class="asterisk">*</span></label>
+                                    <input type="text" id="planta_fisica" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="duracion">Duración <span class="asterisk">*</span></label>
+                                    <input type="text" id="duracion" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="horario">Horario <span class="asterisk">*</span></label>
+                                    <input type="text" id="horario" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="horas_semanales">Horas Semanales <span class="asterisk">*</span></label>
+                                    <input type="text" id="horas_semanales" class="form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="total_horas">Total de Horas <span class="asterisk">*</span></label>
+                                    <input type="text" id="total_horas" class="form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-blue add-data">Agregar</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                   
+                    <div class="tab-pane" id="perfeccionamiento">
+                        <h3>Perfeccionamiento y/o Especialización</h3>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción <span class="asterisk">*</span></label>
+                            <input type="text" id="descripcion" class="form-control">
+                        </div>
+                        <div class="row special">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="planta_fisica">Planta Física <span class="asterisk">*</span></label>
+                                    <input type="text" id="planta_fisica" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="duracion">Duración <span class="asterisk">*</span></label>
+                                    <input type="text" id="duracion" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="horario">Horario <span class="asterisk">*</span></label>
+                                    <input type="text" id="horario" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="horas_semanales">Horas Semanales <span class="asterisk">*</span></label>
+                                    <input type="text" id="horas_semanales" class="form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="total_horas">Total de Horas <span class="asterisk">*</span></label>
+                                    <input type="text" id="total_horas" class="form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-blue add-data">Agregar</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane" id="observaciones">
+                        <h3>observaciones </h3>
+                        <div class="form-group">
+                            <textarea id="observaciones" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /tabs -->  
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-blue">Guardar</button>
+                </div>
+            </form>                 
+        </div>
+    </div>
+</div>

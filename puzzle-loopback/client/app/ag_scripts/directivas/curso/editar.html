@@ -1,0 +1,69 @@
+<div class="modal-header">
+    <h3 class="modal-title">Información de la Asignatura</h3>
+</div>
+
+<div class="modal-body">
+    <form class="formulario" name="cursoForm">
+        <div class="form-group" ng-class="{'has-error':cursoForm.codigo.$invalid && !cursoForm.$pristine}">
+
+            <label for="codigo">Código <span class="asterisk">*</span></label>
+            <input type="text" name="codigo" ng-model="curso.codigo" id="codigo" class="form-control" required="required">
+            <span class="help-block" ng-show="cursoForm.codigo.$invalid && cursoForm.codigo.$dirty">Por favor ingrese el código</span>
+        </div>
+        <div class="form-group" ng-class="{'has-error':cursoForm.nombre.$invalid && !cursoForm.$pristine}">
+            <label for="nombre">Nombre <span class="asterisk">*</span></label>
+            <input type="text" name="nombre" ng-model="curso.nombre" id="nombre" class="form-control" required="required">
+            <span class="help-block" ng-show="cursoForm.nombre.$invalid && cursoForm.nombre.$dirty">Por favor ingrese el nombre de la asignatura</span>
+        </div>
+        <div class="form-group">
+            <label for="creditos">Pre-requisito</label>
+            <input type="text" id="creditos" class="form-control">
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="ht">H. Teoría</label>
+                    <input type="text" ng-model="curso.horasTeoria" id="ht" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="hp">H. Práctica</label>
+                    <input type="text" ng-model="curso.horasPractica" id="hp" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="htp">H. Teoría/práctica</label>
+                    <input type="text" ng-model="curso.horasTeoriaPractica" id="htp" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group" ng-class="{'has-error':cursoForm.creditos.$invalid && !cursoForm.$pristine}">
+                    <label for="creditos">Créditos <span class="asterisk">*</span></label>
+                    <input type="text" name="creditos" ng-model="curso.creditos" id="creditos" class="form-control" required="required">
+                    <span class="help-block" ng-show="cursoForm.creditos.$invalid && cursoForm.creditos.$dirty">Por favor ingrese los créditos de la asignatura</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group" 
+                    ng-class="{'has-error':cursoForm.anioLectivo.$invalid && !cursoForm.$pristine}">
+                    <label for="htp">Año Lectivo <span class="asterisk">*</span></label>
+                    <input type="text" ng-model="curso.anioLectivo" id="anioLectivo" class="form-control" required="required" name="anioLectivo">
+                    <span class="help-block" ng-show="cursoForm.anioLectivo.$invalid && cursoForm.anioLectivo.$dirty">Por favor ingrese el Año Lectivo</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group" ng-class="{'has-error':cursoForm.semestre.$invalid && !cursoForm.$pristine}">
+                    <label for="htp">Semestre <span class="asterisk">*</span></label>
+                    <input type="text" ng-model="curso.semestre" id="semestre" class="form-control" required="required" name="semestre">
+                    <span class="help-block" ng-show="cursoForm.semestre.$invalid && cursoForm.semestre.$dirty">Por favor ingrese el Semestre</span>
+                </div>
+            </div>
+        </div>
+    </form>           
+</div>
+<div class="modal-footer">
+    <button class="btn btn-purpura" type="button" ng-click="editarCurso()">Guardar</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancelar</button>
+</div>

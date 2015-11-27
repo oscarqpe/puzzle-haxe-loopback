@@ -1,0 +1,32 @@
+<div class="tab-pane" id="bibliografia">
+    <h3>Bibliografía Básica y Especializada</h3>
+
+    <label>Básica</label>
+    
+    <div class="form-group form-add" ng-repeat="item in contenido.bibliografia.basica">
+        <input type="text" class="form-control" ng-model="item.descripcion" />
+        <button type="button" class="btn btn-danger" ng-click="quitarBasica($index)">
+            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addBasica()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div>    
+  
+    <label for="especializada">Especializada</label>
+    <div class="form-group form-add" ng-repeat="item in contenido.bibliografia.especializada">
+        <input type="text" class="form-control" ng-model="item.descripcion" />
+        <button type="button" class="btn btn-danger" ng-click="quitarEspecializada($index)">
+            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addEspecializada()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div>   
+</div>

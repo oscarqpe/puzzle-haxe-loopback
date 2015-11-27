@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="directoriosApp" ng-controller="appCtrl" class="unsa-parent">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Directorios - UNSA</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- page specific plugin styles -->
+    <!-- text fonts -->
+    <!-- ace styles -->
+    <!--link rel="stylesheet" href="/ace/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" /-->
+
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/web.css">
+    <link rel="stylesheet" href="bower_components/angular-toasty/css/ng-toasty.css" />
+    <link rel="stylesheet" href="bower_components/sweetalert/lib/sweet-alert.css" />
+
+   <!-- Custom Fonts -->
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-class="ActiveClass()">
+
+    <!--div ng-include="getIncludeHeader()"></div-->
+
+    <div class="container" ng-view>
+
+    </div>
+    
+    <!-- Footer -->
+    <!--div ng-include="getIncludeFooter()"></div-->
+
+    <div ng-controller="toasty-controller">
+        <toasty-container toasty-defaults='{"timeout": 3000, "close-button":true, "sound": false}'></toasty-container>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- ******* -->
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--script type="text/javascript" src="http://www.google.com/jsapi?ext.js"></script-->
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="bower_components/angular-touch/angular-touch.js"></script>
+    <script type="text/javascript" src="bower_components/angular-toasty/js/ng-toasty.js"></script>
+    <script type="text/javascript" src="bower_components/sweetalert/lib/sweet-alert.js"></script>
+    <script type="text/javascript" src="bower_components/angular-sweetalert/SweetAlert.js"></script>
+	
+	<script type="text/javascript" src="js/angular-file-upload.js"></script>
+	<script type="text/javascript" src="js/angular-file-upload.min.js"></script>
+
+    <!--script src="//cdn.jsdelivr.net/sockjs/1.0.0/sockjs.min.js"></script-->
+    
+    <!-- Scripts Angular JS -->
+    <script type="text/javascript" src="/js/lb-services.js"></script>
+    <script type="text/javascript" src="/ag_scripts/app.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="/ag_scripts/controllers/appCtrl.js"></script>
+    <script type="text/javascript" src="/ag_scripts/controllers/loginCtrl.js"></script>
+    <script type="text/javascript" src="/ag_scripts/controllers/registroCtrl.js"></script>
+    <script type="text/javascript" src="/ag_scripts/controllers/indexCtrl.js"></script>
+    <script type="text/javascript" src="/ag_scripts/controllers/cursoCtrl.js"></script>
+    <script type="text/javascript" src="/ag_scripts/controllers/docenteCtrl.js"></script>
+    <script type="text/javascript" src="/ag_scripts/controllers/silaboCtrl.js"></script>
+    <script type="text/javascript" src="/ag_scripts/controllers/modalInstanceCtrl.js"></script>
+    <script type="text/javascript" src="/ag_scripts/controllers/parametroCtrl.js"></script>
+    
+    <!-- Admin Ctrls -->
+    <!-- Services -->
+    <script type="text/javascript" src="/ag_scripts/services/appServices.js"></script>
+    <script type="text/javascript" src="/ag_scripts/services/cursoService.js"></script>
+    <script type="text/javascript" src="/ag_scripts/services/docenteService.js"></script>
+    <script type="text/javascript" src="/ag_scripts/services/silaboService.js"></script>
+    <script type="text/javascript" src="/ag_scripts/services/messageService.js"></script>
+    <script type="text/javascript" src="/ag_scripts/services/parametroService.js"></script>
+
+    <!--script type="text/javascript" src="./jquery-2.1.4.min.js"></script-->
+    <!--script type="text/javascript" src="/js/soundjs.min.js"></script-->
+    <script type="text/javascript" src="/js/Puzzle.js"></script>
+    
+    <!-- Translate -->
+    <script type="text/javascript" src="/my_scripts/scripts.js"></script>
+</body>
+</html>

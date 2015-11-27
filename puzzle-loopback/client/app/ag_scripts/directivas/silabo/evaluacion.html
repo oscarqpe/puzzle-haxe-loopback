@@ -1,0 +1,28 @@
+<div class="tab-pane" id="evaluacion">
+    <h3>Evaluación: Requisitos de Aprobación</h3>
+
+    <label>La evaluación será en base a los siguientes ítems:</label>
+    <div class="form-group form-add" ng-repeat="item in contenido.evaluacion.items">
+        <input type="text" class="form-control" ng-model="item.descripcion"/>
+        <button type="button" class="btn btn-danger" ng-click="quitarEvaluacion($index)">
+            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addEvaluacion()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div>
+
+    <div class="form-group">
+	    <label>La Nota Promocional (NP) se calcula de la siguiente manera</label>
+        <input type="text" class="form-control" ng-model="contenido.evaluacion.promocional">
+    </div>
+
+    <div class="form-group">
+	    <label>Observación</label>
+	    <textarea class="form-control" ng-model="contenido.evaluacion.observacion" placeholder="La evaluación se realizará en escala vigesimal. El curso se aprueba con Nota Promocional igual o mayor a 11."></textarea>
+       
+    </div>
+
+</div>

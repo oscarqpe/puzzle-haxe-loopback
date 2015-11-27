@@ -1,0 +1,38 @@
+<div class="tab-pane active" id="registros">
+    <h3>Asignaturas asignadas</h3>
+    <!-- listado de cursos -->
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nombre de la asignatura</th>
+                <th>Créditos</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="curso_ in cursos">
+                <td>{{curso_.codigo}}</td>
+                <td>{{curso_.nombre}}</td>
+                <td>{{curso_.creditos}} </td>
+            
+                <td class="icon-details">
+                    <a href="" ng-click="openEditar({{curso_}})" title="Editar"><img src="../../images/editar.png"></a>
+                    <a href="" ng-click="openEliminar({{curso_.idCurso}})" title="Eliminar"><img src="../../images/eliminar.png"></a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Botones -->
+    <ul class="buttons-details">
+        <li><img src="../../images/editar.png">Editar</li>
+        <li><img src="../../images/eliminar.png">Eliminar</li>
+    </ul>
+
+    <script type="text/ng-template" id="modalEditar">
+        <editarcurso></editarcurso>
+    </script>
+
+</div>

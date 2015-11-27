@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="cursos">
+            <!-- tabs left -->
+            <div class="tabs-left">
+                <ul class="nav nav-tabs">
+                    <li ng-repeat="tab in tabs" ng-click="onClickTab(tab)" ng-class="{'active':selectedTab == $index}"><a data-toggle="tab">{{tab.title}}</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div ng-include="currentTab"></div>
+                </div>
+            </div>
+            <!-- /tabs -->                   
+            <script type="text/ng-template" id="registros">
+                <listacursos></listacursos>
+            </script>
+            <script type="text/ng-template" id="agregar">
+                <agregarcurso></agregarcurso>
+            </script>
+        </div>
+    </div>
+</div>

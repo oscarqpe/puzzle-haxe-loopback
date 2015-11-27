@@ -1,0 +1,73 @@
+<div class="tab-pane" id="estrategias">
+    <h3>Estrategias</h3>
+
+    <label>Estrategias pedagógicas</label>
+    <div class="form-group form-add" ng-repeat="item in contenido.estrategias.pedagogicas">
+        <input type="text" class="form-control" ng-model="item.descripcion"/>
+        <button type="button" class="btn btn-danger" ng-click="quitarEstrategia($index)">
+            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addEstrategia()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div>
+
+    <!-- Cronograma -->
+    <h3 class="cronograma">Cronograma o Calendarización</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group fecha">
+                <label for="inicioAsig">Inicio de la Asignatura</label>
+                <input type="text" id="inicioAsig" class="form-control" datepicker-popup="{{format}}" ng-model="contenido.cronograma.inicioAsignatura" is-open="opened[$index]" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event, $index)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p class="input-group fecha">
+                <label for="finAsig">Finalización de la Asignatura</label>
+                <input type="text" id="finAsig" class="form-control" datepicker-popup="{{format}}" ng-model="contenido.cronograma.finAsignatura" is-open="openedFin[$index]" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="openFin($event, $index)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <label>Fecha de Exámenes: <span>Teoría / Practica</span></label>
+    <div class="row form-group form-add" ng-repeat="item in contenido.cronograma.fechas">
+        <div class="col-md-5">
+        <input type="text" class="form-control" ng-model="item.teoria"/>
+        </div>
+        <div class="col-md-5">
+            <input type="text" class="form-control" ng-model="item.practica"/>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-danger" ng-click="quitarFechaTeoria($index)">
+                <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addFechaTeoria()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div>
+
+    <!--label>Fecha de Exámenes: <span>Práctica</span></label>
+    <div class="form-group form-add" ng-repeat="item in contenido.cronograma.fechaPractica">
+        <input type="text" class="form-control" ng-model="item.descripcion"/>
+        <button type="button" class="btn btn-danger" ng-click="quitarFechaPractica($index)">
+            <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="botones-group">
+        <button class="btn btn-success" ng-click="addFechaPractica()">
+           <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar     
+        </button>
+    </div-->
+
+</div>

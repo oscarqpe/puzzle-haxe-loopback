@@ -1,0 +1,23 @@
+<div class="tab-pane" id="social">
+    <form class="formulario" ng-submit="guardarSocial()">
+        <h3>Perfiles sociales</h3>
+        <div class="form-group">
+            <label for="facebook">Facebook</label>
+            <input type="text" id="facebook" ng-model="usuario.facebook" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="twitter">Twitter</label>
+            <input type="text" id="twitter" ng-model="usuario.twitter" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="google">Google+</label>
+            <input type="text" id="google" ng-model="usuario.googleplus" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="linkedin">LinkedIn</label>
+            <input type="text" id="linkedin" ng-model="usuario.linkedin" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-blue">Guardar</button>
+    </form>
+</div>
